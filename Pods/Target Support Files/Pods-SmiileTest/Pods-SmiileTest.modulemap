@@ -1,0 +1,6 @@
+framework module Pods_SmiileTest {
+  umbrella header "Pods-SmiileTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
