@@ -24,6 +24,8 @@ class SignInVC: UIViewController {
 	weak var delegate: SignInVCDelegate?
 
 	@IBOutlet weak var goToSignUpButton: UIButton!
+	@IBOutlet weak var fieldsStackView: UIStackView!
+	@IBOutlet weak var facebookButtonContainer: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,8 @@ class SignInVC: UIViewController {
 		setupBarButtonItems()
 		setupNavigationBar()
 		setupSignUpButton()
+		setupForm()
+		setupFacebookButton()
     }
 
 	func setupBarButtonItems() {
@@ -45,7 +49,7 @@ class SignInVC: UIViewController {
 	}
 
 	func setupSignUpButton() {
-		goToSignUpButton.customizeAsFilled(title: viewModel.signUpButtonTitle)
+		goToSignUpButton.customizeAsEmpty(title: viewModel.signUpButtonTitle)
 		goToSignUpButton.rx.tap
 			.subscribe(onNext: { [unowned self] in
 				self.delegate?.signInVCDidTapSignUp()
@@ -54,9 +58,44 @@ class SignInVC: UIViewController {
 
 	func setupNavigationBar() {
 		self.navigationController?.setNavigationBarHidden(false, animated: false)
+		navigationController?.navigationBar.customizeAsTranslucent()
 	}
 
 	func setupView() {
-		view.backgroundColor = UIColor.Brand.blue
+		title = viewModel.title
+		view.backgroundColor = .white
+	}
+
+	func setupFacebookButton() {
+		let facebookButton = UIButton.imageButton(image: #imageLiteral(resourceName: "facebook"))
+		facebookButton.rx.tap
+			.subscribe(onNext: { [unowned self] in
+				self.delegate?.signInVCDidAuthenticate()
+			}).disposed(by: disposeBag)
+
+		fieldsStackView.addArrangedSubview(facebookButton)
+		facebookButtonContainer.embed(view: facebookButton)
+	}
+
+	func setupForm() {
+		let loginField = TextFieldView.viewFromNib
+		loginField.configure(viewModel: TextFieldViewViewModel(title: "Identifiant Smiile", placeholder: "alex@voodoo.io"))
+		let passwordField = TextFieldView.viewFromNib
+		passwordField.configure(viewModel: TextFieldViewViewModel(title: "Mot de passe", placeholder: "aPassw@rd1!!", isSecure: true))
+
+		fieldsStackView.addArrangedSubview(loginField)
+		fieldsStackView.addArrangedSubview(passwordField)
+
+		let validationButton = FormButton(type: .custom)
+		validationButton.customizeAsFilled(title: "Valider")
+		validationButton.rx.tap
+			.subscribe(onNext: { [unowned self] in
+				self.delegate?.signInVCDidAuthenticate()
+			}).disposed(by: disposeBag)
+		fieldsStackView.addArrangedSubview(validationButton)
+
+		let separatorView = SeparatorView.viewFromNib
+		separatorView.configure(viewModel: SeparatorViewViewModel(separatorColor: .clear, title: "Ou Facebook Connect"))
+		fieldsStackView.addArrangedSubview(separatorView)
 	}
 }

@@ -12,4 +12,10 @@ struct SignInVCViewModel {
 	let dismissButtonTitle = "Annuler"
 	let dismissButtonTitleColor = UIColor.Brand.orange
 	let signUpButtonTitle = "Je m'inscris"
+	let title = "Connexion"
+
+	var login = ""
+	var password = ""
+
+	
 }

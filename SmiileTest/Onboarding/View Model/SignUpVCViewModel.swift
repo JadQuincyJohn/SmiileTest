@@ -9,9 +9,8 @@
 import UIKit
 
 struct SignUpVCViewModel {
-
-	let signInButtonTitle = "Connexion"
+	let signInButtonTitle = "J'ai déjà un compte"
 	let dismissButtonTitle = "Annuler"
 	let dismissButtonTitleColor = UIColor.Brand.orange
-	
+	let title = "Inscription"
 }

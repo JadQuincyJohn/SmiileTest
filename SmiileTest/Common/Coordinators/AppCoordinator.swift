@@ -37,7 +37,7 @@ class AppCoordinator: Coordinator {
 	}
 
 	func showSignIn(presenter: UIViewController) {
-		let coordinator = SignInCoordinator(presenter: presenter)
+		let coordinator = SignInCoordinator(presenter: presenter, animated: true)
 		coordinator.start()
 		coordinator.delegate = self
 		addChildCoordinator(coordinator)
@@ -45,7 +45,7 @@ class AppCoordinator: Coordinator {
 
 	func showSignUp(presenter: UIViewController) {
 
-		let coordinator = SignUpCoordinator(presenter: presenter)
+		let coordinator = SignUpCoordinator(presenter: presenter, animated: true)
 		coordinator.start()
 		coordinator.delegate = self
 		addChildCoordinator(coordinator)
@@ -58,7 +58,7 @@ extension AppCoordinator: OnboardingCoordinatorDelegate {
 	}
 
 	func onboardingVCDidTapSignUpButton(coordinator: OnboardingCoordinator) {
-		showSignIn(presenter: rootViewController)
+		showSignUp(presenter: coordinator.navigationController)
 	}
 }
 
@@ -73,17 +73,19 @@ extension AppCoordinator: SignInCoordinatorDelegate {
 	}
 
 	func signInVCDidAuthenticate(coordinator: SignInCoordinator) {
-
+		removeChildCoordinator(coordinator)
+		rootViewController.dismiss(animated: true)
 	}
 }
 
 extension AppCoordinator: SignUpCoordinatorDelegate {
 
 	func signUpVCDidRegister(coordinator: SignUpCoordinator) {
-		
+		removeChildCoordinator(coordinator)
 	}
 
 	func signUpVCDidTapSignIn(coordinator: SignUpCoordinator) {
 		showSignUp(presenter: coordinator.navigationController)
 	}
 }
+

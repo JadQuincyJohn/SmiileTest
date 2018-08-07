@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  ActuVC.swift
 //  SmiileTest
 //
 //  Created by Jad  on 06/08/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ActuVC: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()

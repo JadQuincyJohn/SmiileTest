@@ -19,26 +19,31 @@ class SignInCoordinator: Coordinator {
 
 	let presenter: UIViewController
 	let navigationController: UINavigationController
+	let animated: Bool
 
 	weak var delegate: SignInCoordinatorDelegate?
 
-	init(presenter: UIViewController) {
+	init(presenter: UIViewController, animated: Bool) {
 		self.presenter = presenter
 		navigationController = UINavigationController()
+		self.animated = animated
 	}
 
 	func start() {
 		let signInVC: SignInVC = UIViewController.instanciate(storyBoardName: "Main")
 		signInVC.delegate = self
 		navigationController.viewControllers = [signInVC]
-		presenter.present(navigationController, animated: true)
+		presenter.present(navigationController, animated: animated)
 	}
 }
 
 extension SignInCoordinator: SignInVCDelegate {
 	func signInVCDidTapSignUp() {
-		presenter.dismiss(animated: true)
-		delegate?.signInVCDidTapSignUp(coordinator: self)
+		presenter.dismiss(animated: false)
+		let coordinator = SignUpCoordinator(presenter: presenter, animated: false)
+		coordinator.start()
+		coordinator.delegate = self
+		addChildCoordinator(coordinator)
 	}
 
 	func signInVCDidDismiss() {
@@ -48,5 +53,17 @@ extension SignInCoordinator: SignInVCDelegate {
 	func signInVCDidAuthenticate() {
 		presenter.dismiss(animated: true)
 		delegate?.signInVCDidAuthenticate(coordinator: self)
+	}
+}
+
+extension SignInCoordinator: SignUpCoordinatorDelegate {
+	func signUpVCDidRegister(coordinator: SignUpCoordinator) {
+		presenter.dismiss(animated: true)
+		removeChildCoordinator(coordinator)
+	}
+
+	func signUpVCDidTapSignIn(coordinator: SignUpCoordinator) {
+		presenter.dismiss(animated: true)
+		removeChildCoordinator(coordinator)
 	}
 }

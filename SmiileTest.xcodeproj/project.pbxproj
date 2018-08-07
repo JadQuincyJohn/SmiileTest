@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		05932C2B21184745003C5DA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05932C2A21184745003C5DA4 /* AppDelegate.swift */; };
-		05932C2D21184745003C5DA4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05932C2C21184745003C5DA4 /* FirstViewController.swift */; };
+		05932C2D21184745003C5DA4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05932C2C21184745003C5DA4 /* SearchViewController.swift */; };
 		05932C2F21184745003C5DA4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05932C2E21184745003C5DA4 /* SecondViewController.swift */; };
 		05932C3221184745003C5DA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05932C3021184745003C5DA4 /* Main.storyboard */; };
 		05932C3421184746003C5DA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05932C3321184746003C5DA4 /* Assets.xcassets */; };
@@ -35,6 +35,16 @@
 		05932C7F2118C93D003C5DA4 /* Nibable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05932C7E2118C93D003C5DA4 /* Nibable.swift */; };
 		05932C872118CD2B003C5DA4 /* ActionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05932C852118CD2B003C5DA4 /* ActionView.xib */; };
 		05932C882118CD2B003C5DA4 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05932C862118CD2B003C5DA4 /* ActionView.swift */; };
+		05932C8A2118F6A0003C5DA4 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05932C892118F6A0003C5DA4 /* TextFieldView.swift */; };
+		05932C8C2118F6B5003C5DA4 /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05932C8B2118F6B5003C5DA4 /* TextFieldView.xib */; };
+		05932C8E21197E7E003C5DA4 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05932C8D21197E7E003C5DA4 /* SeparatorView.swift */; };
+		05932C9021197ECE003C5DA4 /* SeparatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05932C8F21197ECE003C5DA4 /* SeparatorView.xib */; };
+		05932C9221198B93003C5DA4 /* FormButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05932C9121198B93003C5DA4 /* FormButton.swift */; };
+		05932C9821199C35003C5DA4 /* TodayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05932C9721199C35003C5DA4 /* TodayVC.swift */; };
+		05932C9A21199D25003C5DA4 /* ProfileShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05932C9921199D25003C5DA4 /* ProfileShortcutView.swift */; };
+		05932C9C21199D3B003C5DA4 /* ProfileShortcutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05932C9B21199D3B003C5DA4 /* ProfileShortcutView.xib */; };
+		05932C9E2119A021003C5DA4 /* MockVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05932C9D2119A021003C5DA4 /* MockVC.swift */; };
+		05932CA02119B05D003C5DA4 /* OffersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05932C9F2119B05D003C5DA4 /* OffersVC.swift */; };
 		25A45C1C3F8ED2B8EB6CE8D0 /* Pods_SmiileTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4058D74FACD8EFBCA636AB96 /* Pods_SmiileTestTests.framework */; };
 		B565A10EA236EE54CBB79532 /* Pods_SmiileTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9C948B040DA8AF47366EE4 /* Pods_SmiileTest.framework */; };
 /* End PBXBuildFile section */
@@ -52,7 +62,7 @@
 /* Begin PBXFileReference section */
 		05932C2721184745003C5DA4 /* SmiileTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmiileTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05932C2A21184745003C5DA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		05932C2C21184745003C5DA4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		05932C2C21184745003C5DA4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		05932C2E21184745003C5DA4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		05932C3121184745003C5DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05932C3321184746003C5DA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +92,16 @@
 		05932C7E2118C93D003C5DA4 /* Nibable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nibable.swift; sourceTree = "<group>"; };
 		05932C852118CD2B003C5DA4 /* ActionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionView.xib; sourceTree = "<group>"; };
 		05932C862118CD2B003C5DA4 /* ActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
+		05932C892118F6A0003C5DA4 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		05932C8B2118F6B5003C5DA4 /* TextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldView.xib; sourceTree = "<group>"; };
+		05932C8D21197E7E003C5DA4 /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
+		05932C8F21197ECE003C5DA4 /* SeparatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeparatorView.xib; sourceTree = "<group>"; };
+		05932C9121198B93003C5DA4 /* FormButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormButton.swift; sourceTree = "<group>"; };
+		05932C9721199C35003C5DA4 /* TodayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayVC.swift; sourceTree = "<group>"; };
+		05932C9921199D25003C5DA4 /* ProfileShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileShortcutView.swift; sourceTree = "<group>"; };
+		05932C9B21199D3B003C5DA4 /* ProfileShortcutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileShortcutView.xib; sourceTree = "<group>"; };
+		05932C9D2119A021003C5DA4 /* MockVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVC.swift; sourceTree = "<group>"; };
+		05932C9F2119B05D003C5DA4 /* OffersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersVC.swift; sourceTree = "<group>"; };
 		2F9C948B040DA8AF47366EE4 /* Pods_SmiileTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmiileTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4058D74FACD8EFBCA636AB96 /* Pods_SmiileTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmiileTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87D7C2DAB7B4C1091305EE9A /* Pods-SmiileTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmiileTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmiileTestTests/Pods-SmiileTestTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,9 +154,9 @@
 			isa = PBXGroup;
 			children = (
 				05932C5021184F10003C5DA4 /* Common */,
+				05932C9621199BBD003C5DA4 /* Menu */,
 				05932C4C21184E50003C5DA4 /* Onboarding */,
 				05932C2A21184745003C5DA4 /* AppDelegate.swift */,
-				05932C2C21184745003C5DA4 /* FirstViewController.swift */,
 				05932C2E21184745003C5DA4 /* SecondViewController.swift */,
 				05932C3021184745003C5DA4 /* Main.storyboard */,
 				05932C3321184746003C5DA4 /* Assets.xcassets */,
@@ -181,6 +201,7 @@
 				05932C802118C954003C5DA4 /* Views */,
 				05932C582118520E003C5DA4 /* Coordinators */,
 				05932C5121184F1B003C5DA4 /* Extensions */,
+				05932C9D2119A021003C5DA4 /* MockVC.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -242,8 +263,49 @@
 			children = (
 				05932C862118CD2B003C5DA4 /* ActionView.swift */,
 				05932C852118CD2B003C5DA4 /* ActionView.xib */,
+				05932C892118F6A0003C5DA4 /* TextFieldView.swift */,
+				05932C8B2118F6B5003C5DA4 /* TextFieldView.xib */,
+				05932C8D21197E7E003C5DA4 /* SeparatorView.swift */,
+				05932C8F21197ECE003C5DA4 /* SeparatorView.xib */,
+				05932C9121198B93003C5DA4 /* FormButton.swift */,
+				05932C9921199D25003C5DA4 /* ProfileShortcutView.swift */,
+				05932C9B21199D3B003C5DA4 /* ProfileShortcutView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		05932C9321199B96003C5DA4 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				05932C9721199C35003C5DA4 /* TodayVC.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		05932C9421199BA0003C5DA4 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				05932C2C21184745003C5DA4 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		05932C9521199BAB003C5DA4 /* Offer */ = {
+			isa = PBXGroup;
+			children = (
+				05932C9F2119B05D003C5DA4 /* OffersVC.swift */,
+			);
+			path = Offer;
+			sourceTree = "<group>";
+		};
+		05932C9621199BBD003C5DA4 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				05932C9521199BAB003C5DA4 /* Offer */,
+				05932C9421199BA0003C5DA4 /* Search */,
+				05932C9321199B96003C5DA4 /* Today */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		09D5053550FE404EBC08F619 /* Pods */ = {
@@ -350,7 +412,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05932C8C2118F6B5003C5DA4 /* TextFieldView.xib in Resources */,
+				05932C9C21199D3B003C5DA4 /* ProfileShortcutView.xib in Resources */,
 				05932C872118CD2B003C5DA4 /* ActionView.xib in Resources */,
+				05932C9021197ECE003C5DA4 /* SeparatorView.xib in Resources */,
 				05932C3721184746003C5DA4 /* LaunchScreen.storyboard in Resources */,
 				05932C3421184746003C5DA4 /* Assets.xcassets in Resources */,
 				05932C3221184745003C5DA4 /* Main.storyboard in Resources */,
@@ -374,6 +439,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SmiileTest/Pods-SmiileTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
@@ -382,6 +448,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
@@ -438,12 +505,18 @@
 			files = (
 				05932C5721185127003C5DA4 /* OnboardingVCViewModel.swift in Sources */,
 				05932C6921188B98003C5DA4 /* UIViewController+ST.swift in Sources */,
+				05932C8A2118F6A0003C5DA4 /* TextFieldView.swift in Sources */,
+				05932C9E2119A021003C5DA4 /* MockVC.swift in Sources */,
+				05932C9221198B93003C5DA4 /* FormButton.swift in Sources */,
 				05932C882118CD2B003C5DA4 /* ActionView.swift in Sources */,
 				05932C7B2118B277003C5DA4 /* SignInVCViewModel.swift in Sources */,
+				05932C9821199C35003C5DA4 /* TodayVC.swift in Sources */,
 				05932C2F21184745003C5DA4 /* SecondViewController.swift in Sources */,
+				05932C9A21199D25003C5DA4 /* ProfileShortcutView.swift in Sources */,
 				05932C4F21184E88003C5DA4 /* OnboardingVC.swift in Sources */,
 				05932C632118598C003C5DA4 /* UIColor+ST.swift in Sources */,
 				05932C2B21184745003C5DA4 /* AppDelegate.swift in Sources */,
+				05932CA02119B05D003C5DA4 /* OffersVC.swift in Sources */,
 				05932C61211857E0003C5DA4 /* OnboardingService.swift in Sources */,
 				05932C6721188A75003C5DA4 /* UINavigationBar+ST.swift in Sources */,
 				05932C5E211853AC003C5DA4 /* OnboardingCoordinator.swift in Sources */,
@@ -452,8 +525,9 @@
 				05932C5C2118534C003C5DA4 /* AppCoordinator.swift in Sources */,
 				05932C65211883B9003C5DA4 /* UIButton+ST.swift in Sources */,
 				05932C792118ADB3003C5DA4 /* SignUpVC.swift in Sources */,
+				05932C8E21197E7E003C5DA4 /* SeparatorView.swift in Sources */,
 				05932C5421184F3C003C5DA4 /* UIView+ST.swift in Sources */,
-				05932C2D21184745003C5DA4 /* FirstViewController.swift in Sources */,
+				05932C2D21184745003C5DA4 /* SearchViewController.swift in Sources */,
 				05932C752118AD37003C5DA4 /* SignUpCoordinator.swift in Sources */,
 				05932C732118AD1E003C5DA4 /* SignInCoordinator.swift in Sources */,
 				05932C7D2118C02C003C5DA4 /* SignUpVCViewModel.swift in Sources */,
@@ -629,7 +703,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.inertia.SmiileTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -648,7 +722,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.inertia.SmiileTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

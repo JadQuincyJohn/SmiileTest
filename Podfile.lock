@@ -1,4 +1,5 @@
 PODS:
+  - IQKeyboardManager (6.0.3)
   - paper-onboarding (4.1.0)
   - RxCocoa (4.2.0):
     - RxSwift (~> 4.0)
@@ -11,6 +12,7 @@ PODS:
   - RxSwift (4.2.0)
 
 DEPENDENCIES:
+  - IQKeyboardManager
   - paper-onboarding
   - RxCocoa
   - RxGesture
@@ -19,6 +21,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - IQKeyboardManager
     - paper-onboarding
     - RxCocoa
     - RxGesture
@@ -26,12 +29,13 @@ SPEC REPOS:
     - RxSwift
 
 SPEC CHECKSUMS:
+  IQKeyboardManager: c390e612f4b98c8fd748016470138537dc163ead
   paper-onboarding: 344780cbb0bfc229cd1862f5b9bba446b23c5185
   RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
   RxGesture: c278eb05b187abd47e11e65464ae4de53ab71d95
   RxOptional: fabc37fc8e3cf4c336ebaeb5c92b576c64b2e6c5
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
 
-PODFILE CHECKSUM: eb1d7eea7c5b36ca630c8ec81d3f13a89050944b
+PODFILE CHECKSUM: 204a843a1d3ab3f855dd4379e93ed7fd94373c6c
 
 COCOAPODS: 1.5.0

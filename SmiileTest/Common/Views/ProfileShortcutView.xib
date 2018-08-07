@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ProfileShortcutView" customModule="SmiileTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="142" height="36"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="udX-ef-dWI">
+                    <rect key="frame" x="0.0" y="0.0" width="142" height="36"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="ssK-M9-6mc">
+                            <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="ssK-M9-6mc" secondAttribute="height" multiplier="1:1" id="NCU-qb-u0m"/>
+                                <constraint firstAttribute="height" constant="36" id="a1F-mh-j1U"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUG-mc-squ">
+                            <rect key="frame" x="40" y="0.0" width="102" height="36"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ssK-M9-6mc" firstAttribute="leading" secondItem="udX-ef-dWI" secondAttribute="leading" id="dME-o3-Q5Q"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="udX-ef-dWI" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="0u3-A0-WCx"/>
+                <constraint firstItem="udX-ef-dWI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XAE-Pq-Oa2"/>
+                <constraint firstItem="udX-ef-dWI" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="k18-sN-ybO"/>
+                <constraint firstItem="udX-ef-dWI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vYy-Tw-FAb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="label" destination="gUG-mc-squ" id="TmI-1b-b36"/>
+            </connections>
+            <point key="canvasLocation" x="-83" y="54"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="thumbnail" width="84" height="85"/>
+    </resources>
+</document>

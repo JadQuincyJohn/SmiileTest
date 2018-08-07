@@ -19,7 +19,14 @@ extension UIButton {
 		return button
 	}
 
-	func customizeAsFilled(title: String) {
+	static func imageButton(image: UIImage, size: CGSize = CGSize(width: 44, height: 44)) -> UIButton {
+		let imageButton = UIButton(type: .custom)
+		imageButton.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+		imageButton.setImage(image, for: .normal)
+		return imageButton
+	}
+
+	func customizeAsFilled(title: String = "") {
 		setTitle(title, for: .normal)
 		setTitleColor(UIColor.white, for: .normal)
 		customizeAppearance(color: UIColor.Brand.orange)

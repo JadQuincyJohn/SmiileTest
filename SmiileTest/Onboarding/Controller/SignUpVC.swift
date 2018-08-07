@@ -24,15 +24,19 @@ class SignUpVC: UIViewController {
 	weak var delegate: SignUpVCDelegate?
 
 	@IBOutlet weak var goToSignInButton: UIButton!
+	@IBOutlet weak var label: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 		setupGoToSignInButton()
 		setupBarButtonItems()
+		setupView()
+		setupNavigationBar()
+		label.text = "Not implemented."
     }
 
 	func setupGoToSignInButton() {
-		goToSignInButton.customizeAsFilled(title: viewModel.signInButtonTitle)
+		goToSignInButton.customizeAsEmpty(title: viewModel.signInButtonTitle)
 		goToSignInButton.rx.tap
 			.subscribe(onNext: { [unowned self] in
 				self.delegate?.signUpVCDidTapSignIn()
@@ -48,5 +52,15 @@ class SignUpVC: UIViewController {
 				self.delegate?.signUpVCDidDismiss()
 			}).disposed(by: disposeBag)
 		navigationItem.setRightBarButton(UIBarButtonItem(customView: dismissButton), animated: true)
+	}
+
+	func setupView() {
+		title = viewModel.title
+		view.backgroundColor = .white
+	}
+
+	func setupNavigationBar() {
+		self.navigationController?.setNavigationBarHidden(false, animated: false)
+		navigationController?.navigationBar.customizeAsTranslucent()
 	}
 }

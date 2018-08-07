@@ -18,20 +18,22 @@ class SignUpCoordinator: Coordinator {
 	var childCoordinators: [Coordinator] = []
 
 	let presenter: UIViewController
+	let animated: Bool
 	let navigationController: UINavigationController
 
 	weak var delegate: SignUpCoordinatorDelegate?
 
-	init(presenter: UIViewController) {
+	init(presenter: UIViewController, animated: Bool) {
 		self.presenter = presenter
 		navigationController = UINavigationController()
+		self.animated = animated
 	}
 
 	func start() {
 		let signUpVC: SignUpVC = UIViewController.instanciate(storyBoardName: "Main")
 		signUpVC.delegate = self
 		navigationController.viewControllers = [signUpVC]
-		presenter.present(navigationController, animated: true)
+		presenter.present(navigationController, animated: animated)
 	}
 }
 
@@ -46,6 +48,22 @@ extension SignUpCoordinator: SignUpVCDelegate {
 	}
 
 	func signUpVCDidTapSignIn() {
+		presenter.dismiss(animated: false)
+		let coordinator = SignInCoordinator(presenter: presenter, animated: false)
+		coordinator.start()
+		coordinator.delegate = self
+		addChildCoordinator(coordinator)
+	}
+}
+
+extension SignUpCoordinator: SignInCoordinatorDelegate {
+	func signInVCDidTapSignUp(coordinator: SignInCoordinator) {
 		presenter.dismiss(animated: true)
+		removeChildCoordinator(coordinator)
+	}
+
+	func signInVCDidAuthenticate(coordinator: SignInCoordinator) {
+		presenter.dismiss(animated: true)
+		removeChildCoordinator(coordinator)
 	}
 }

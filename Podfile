@@ -7,6 +7,7 @@ def shared_pods
 	pod 'RxOptional'
 	pod 'RxGesture'
 	pod 'paper-onboarding'
+	pod 'IQKeyboardManager'
 end
 
 target 'SmiileTest' do

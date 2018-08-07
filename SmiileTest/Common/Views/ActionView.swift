@@ -13,5 +13,4 @@ final class ActionView: UIView, Nibable {
 	@IBOutlet weak var stackView: UIStackView!
 	@IBOutlet weak var button1: UIButton!
 	@IBOutlet weak var button2: UIButton!
-
 }
